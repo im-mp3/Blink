@@ -28,7 +28,7 @@ const TopBar = () => {
       {/* Left - Home */}
       <Link
         to="/"
-        className={`text-sm font-medium transition-colors hover:text-white ${
+        className={`text-sm font-medium transition-all duration-200 hover:text-white hover:scale-105 ${
           location.pathname === "/" ? "text-white" : "text-white/60"
         }`}
       >
@@ -36,14 +36,14 @@ const TopBar = () => {
       </Link>
 
       {/* Center - Search */}
-      <div className="flex-1 max-w-md relative">
-        <Search className="absolute left-2.5 top-1/2 -translate-y-1/2 h-3.5 w-3.5 text-white/40" />
+      <div className="flex-1 max-w-md relative group">
+        <Search className="absolute left-2.5 top-1/2 -translate-y-1/2 h-3.5 w-3.5 text-white/40 transition-colors duration-200 group-focus-within:text-white/70" />
         <input
           type="text"
           placeholder="Search..."
           value={search}
           onChange={(e) => setSearch(e.target.value)}
-          className="w-full h-8 rounded-md bg-white/10 border border-white/10 pl-8 pr-3 text-sm text-white placeholder:text-white/40 outline-none focus:border-white/30 transition-colors"
+          className="w-full h-8 rounded-md bg-white/10 border border-white/10 pl-8 pr-3 text-sm text-white placeholder:text-white/40 outline-none transition-all duration-200 hover:bg-white/15 hover:border-white/20 hover:scale-[1.02] focus:border-white/30 focus:bg-white/15 focus:scale-[1.02]"
         />
       </div>
 
@@ -51,14 +51,14 @@ const TopBar = () => {
       <div className="flex items-center gap-3">
         <button
           onClick={() => setDark(!dark)}
-          className="p-1.5 rounded-md hover:bg-white/10 transition-colors text-white/60 hover:text-white"
+          className="p-1.5 rounded-md hover:bg-white/10 transition-all duration-200 text-white/60 hover:text-white hover:scale-110 active:scale-95"
           aria-label="Toggle theme"
         >
           {dark ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
         </button>
         <Link
           to="/about"
-          className={`text-sm font-medium transition-colors hover:text-white ${
+          className={`text-sm font-medium transition-all duration-200 hover:text-white hover:scale-105 ${
             location.pathname === "/about" ? "text-white" : "text-white/60"
           }`}
         >
