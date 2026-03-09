@@ -36,14 +36,14 @@ const TopBar = () => {
       </Link>
 
       {/* Center - Search */}
-      <div className="flex-1 max-w-md relative group">
+      <div className="flex-1 max-w-md relative group transition-transform duration-200 hover:scale-[1.02] focus-within:scale-[1.02]">
         <Search className="absolute left-2.5 top-1/2 -translate-y-1/2 h-3.5 w-3.5 text-white/40 transition-colors duration-200 group-focus-within:text-white/70" />
         <input
           type="text"
           placeholder="Search..."
           value={search}
           onChange={(e) => setSearch(e.target.value)}
-          className="w-full h-8 rounded-md bg-white/10 border border-white/10 pl-8 pr-3 text-sm text-white placeholder:text-white/40 outline-none transition-all duration-200 hover:bg-white/15 hover:border-white/20 hover:scale-[1.02] focus:border-white/30 focus:bg-white/15 focus:scale-[1.02]"
+          className="w-full h-8 rounded-md bg-white/10 border border-white/10 pl-8 pr-3 text-sm text-white placeholder:text-white/40 outline-none transition-all duration-200 hover:bg-white/15 hover:border-white/20 focus:border-white/30 focus:bg-white/15"
         />
       </div>
 
